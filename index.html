@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 1 — Registration Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+  <div class="panel-left">
+    <div>
+      <span class="panel-tag">Task 1</span>
+      <h1 class="panel-title">Create your<br/><span>account.</span></h1>
+    </div>
+    <p style="font-size:0.72rem;color:rgba(255,255,255,0.3);margin-top:2rem;">HTML + CSS + JavaScript only</p>
+  </div>
+
+  <div class="panel-right">
+    <h2 class="form-heading">Register</h2>
+    <p class="form-sub">All fields are required.</p>
+    <form id="regForm" novalidate>
+      <div class="row">
+        <div class="field">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" placeholder="Ahmad" autocomplete="off"/>
+          <span class="field-icon" id="fi-firstName"></span>
+          <span class="error-msg" id="err-firstName"></span>
+        </div>
+        <div class="field">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" placeholder="Tariq" autocomplete="off"/>
+          <span class="field-icon" id="fi-lastName"></span>
+          <span class="error-msg" id="err-lastName"></span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="ahmadtariq@example.com" autocomplete="off"/>
+        <span class="field-icon" id="fi-email"></span>
+        <span class="error-msg" id="err-email"></span>
+      </div>
+      <div class="field">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="+92 300 0000000" autocomplete="off"/>
+        <span class="field-icon" id="fi-phone"></span>
+        <span class="error-msg" id="err-phone"></span>
+      </div>
+      <div class="field">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob"/>
+        <span class="field-icon" id="fi-dob"></span>
+        <span class="error-msg" id="err-dob"></span>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Min 8 chars, 1 uppercase, 1 number"/>
+        <span class="field-icon" id="fi-password"></span>
+        <span class="error-msg" id="err-password"></span>
+        <div class="strength-bar"><div class="strength-fill" id="strengthFill"></div></div>
+        <span class="strength-label" id="strengthLabel"></span>
+      </div>
+      <div class="field">
+        <label for="confirm">Confirm Password</label>
+        <input type="password" id="confirm" placeholder="Repeat your password"/>
+        <span class="field-icon" id="fi-confirm"></span>
+        <span class="error-msg" id="err-confirm"></span>
+      </div>
+      <button class="btn-submit" type="submit">Create Account →</button>
+      <div class="success-banner" id="successMsg">Account created successfully! Welcome aboard.</div>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
